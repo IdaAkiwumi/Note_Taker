@@ -2,7 +2,7 @@
 
 <head>
     <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
+    <script src="server.js"></script>
 </head>
 
 <div class="second-page">
@@ -16,5 +16,18 @@
 
 <script>
 
+    (function getNotes() {
+
+        let notes = getExistingNotes();
+        let notesArray = Object.values(notes)
+        let notesList = document.querySelector('#notes-list')
+      notesArray.forEach( note => {
+            let listItem = document.createElement('li')
+            listItem.innerHTML = note;
+            notesList.appendChild(listItem);
+        });
+
+
+    });
 
 </script>

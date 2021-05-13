@@ -1,6 +1,6 @@
 body {
-    background-color: aqua;
-    color: black;
+    background-color:#EDF7ED;
+    color:#4A4A4A;
 }
 
 div.front-page {
@@ -13,6 +13,7 @@ div.front-page {
 div.second-page {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 32px;
+    color: black;
 }
 
 .note-area {
@@ -25,8 +26,9 @@ height: 30vh;
 }
 
 .submit {
-    background-color: #4CAF50;
+    background-color: #1D4E1F;
     color: white;
+    font-size: 14px;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -36,10 +38,77 @@ height: 30vh;
 }
 
 a {
-    color: brown;
+    color: #1D4E1F;
 }
 
 .notes-link {
     margin-top: 20px;
     padding-top: 20px;
+
 }
+
+
+
+
+
+
+
+
+
+/**
+ * 
+ * 
+ * const http = require('http');
+
+
+const localStorage= http.createServer(function(req,res) {
+
+res.writeHead(200, {'Content-Type': 'text/html'});
+
+res.end( getNoteId());
+
+
+});
+
+
+localStorage.listen(4000, getNoteId());
+
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+const http = require('http');
+
+
+const localStorage = http.createServer(function(req,res) {
+
+res.writeHead(200, {'Content-Type': 'text/html'});
+
+res.end(`#notes-list`);
+
+
+});
+
+
+localStorage.listen(4000, 'localhost');
+
+
+console.log("you have created a server")
+
+
+
+ * 
+ * res.end("Welcome to this!");
+ * server.listen(4000, '127.0.0.1');
+**/
