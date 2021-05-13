@@ -18,16 +18,16 @@
 
     (function getNotes() {
 
-        let notes = getExistingNotes();
+        let notes = getExistingNotes()
         let notesArray = Object.values(notes)
         let notesList = document.querySelector('#notes-list')
       notesArray.forEach( note => {
             let listItem = document.createElement('li')
-            listItem.innerHTML = note;
-            notesList.appendChild(listItem);
-        });
+            listItem.innerHTML = note
+            notesList.appendChild(listItem)
+        })
 
 
-    });
+    })()
 
 </script>
