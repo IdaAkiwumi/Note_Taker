@@ -29,14 +29,14 @@ if (textElement.value == ""){
 }
 
 
+   
 const id = getNoteId()
     let noteObject = getExistingNotes();
     if(!noteObject){
         noteObject = {}
     }
-noteObject(id) = textElement.value;
 
-
+noteObject(id) = textElement.value
 localStorage.setItem('notes', JSON.stringify(noteObject))
 
 alert('Note Saved!')
