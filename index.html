@@ -36,7 +36,7 @@ const id = getNoteId()
         noteObject = {}
     }
 
-noteObjec[id] = textElement.value
+noteObject[id] = textElement.value
 localStorage.setItem('notes', JSON.stringify(noteObject))
 
 alert('Note Saved!')
